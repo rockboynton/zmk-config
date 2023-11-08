@@ -48,10 +48,10 @@
 
         sym {
             bindings = <
-&trans  &trans           &trans         &trans          &trans            &trans                                                              &trans                 &trans             &trans                &trans                 &trans     &trans
-&trans  &kp EXCLAMATION  &kp AT_SIGN    &kp DOLLAR      &kp PERCENT       &kp CARET                                                           &kp AMPERSAND          &kp ASTERISK       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp MINUS  &kp EQUAL
-&trans  &trans           &kp LESS_THAN  &kp LEFT_BRACE  &kp LEFT_BRACKET  &kp LEFT_PARENTHESIS  &trans   &kp C_PLAY_PAUSE  &kp ENTER  &trans  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET  &kp RIGHT_BRACE       &kp GREATER_THAN       &trans     &trans
-                                        &trans          &trans            &kp ESCAPE            &kp TAB  &trans            &trans     &trans  &trans                 &trans             &trans
+&kp TILDE  &trans           &trans         &trans          &trans            &trans                                                              &trans                 &trans             &trans           &trans            &trans    &trans
+&kp GRAVE  &kp EXCLAMATION  &kp AT_SIGN    &kp DOLLAR      &kp PERCENT       &kp CARET                                                           &kp AMPERSAND          &kp ASTERISK       &kp MINUS        &kp EQUAL         &kp BSLH  &kp PIPE
+&trans     &trans           &kp LESS_THAN  &kp LEFT_BRACE  &kp LEFT_BRACKET  &kp LEFT_PARENTHESIS  &trans   &kp C_PLAY_PAUSE  &kp ENTER  &trans  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET  &kp RIGHT_BRACE  &kp GREATER_THAN  &trans    &trans
+                                           &trans          &trans            &kp ESCAPE            &kp TAB  &trans            &trans     &trans  &trans                 &trans             &trans
             >;
 
             sensor-bindings =
