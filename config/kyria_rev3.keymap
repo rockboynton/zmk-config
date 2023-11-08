@@ -35,10 +35,10 @@
 
         num {
             bindings = <
-&trans  &kp F9  &kp F10  &kp F11  &kp F12  &kp LEFT_PARENTHESIS                                  &kp RIGHT_PARENTHESIS  &kp N7  &kp N8  &kp N9  &kp ASTERISK  &kp FSLH
-&trans  &kp F5  &kp F6   &kp F7   &kp F8   &kp LBKT                                              &kp RBKT               &kp N4  &kp N5  &kp N6  &kp EQUAL     &kp ENTER
-&trans  &kp F1  &kp F2   &kp F3   &kp F4   &kp K_CALCULATOR      &trans  &trans  &trans  &trans  &kp N0                 &kp N1  &kp N2  &kp N3  &kp PLUS      &kp MINUS
-                         &trans   &trans   &trans                &trans  &trans  &trans  &trans  &trans                 &trans  &trans
+&trans  &kp F9  &kp F10  &kp F11  &kp F12  &kp LEFT_PARENTHESIS                                         &kp RIGHT_PARENTHESIS  &kp N7  &kp N8  &kp N9  &kp ASTERISK  &kp FSLH
+&trans  &kp F5  &kp F6   &kp F7   &kp F8   &kp LBKT                                                     &kp RBKT               &kp N4  &kp N5  &kp N6  &kp EQUAL     &kp ENTER
+&trans  &kp F1  &kp F2   &kp F3   &kp F4   &kp K_CALCULATOR      &trans  &trans  &trans  &trans         &kp N0                 &kp N1  &kp N2  &kp N3  &kp PLUS      &kp MINUS
+                         &trans   &trans   &trans                &trans  &trans  &trans  &kp BACKSPACE  &kp ENTER              &trans  &trans
             >;
 
             sensor-bindings =
@@ -48,10 +48,10 @@
 
         sym {
             bindings = <
-&trans  &trans           &trans         &trans          &trans            &trans                                                             &trans                 &trans             &trans                &trans                 &trans     &trans
-&trans  &kp EXCLAMATION  &kp AT_SIGN    &kp DOLLAR      &kp PERCENT       &kp CARET                                                          &kp AMPERSAND          &kp ASTERISK       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp MINUS  &kp EQUAL
-&trans  &trans           &kp LESS_THAN  &kp LEFT_BRACE  &kp LEFT_BRACKET  &kp LEFT_PARENTHESIS  &trans  &kp C_PLAY_PAUSE  &kp ENTER  &trans  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET  &kp RIGHT_BRACE       &kp GREATER_THAN       &trans     &trans
-                                        &trans          &trans            &trans                &trans  &trans            &trans     &trans  &trans                 &trans             &trans
+&trans  &trans           &trans         &trans          &trans            &trans                                                              &trans                 &trans             &trans                &trans                 &trans     &trans
+&trans  &kp EXCLAMATION  &kp AT_SIGN    &kp DOLLAR      &kp PERCENT       &kp CARET                                                           &kp AMPERSAND          &kp ASTERISK       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp MINUS  &kp EQUAL
+&trans  &trans           &kp LESS_THAN  &kp LEFT_BRACE  &kp LEFT_BRACKET  &kp LEFT_PARENTHESIS  &trans   &kp C_PLAY_PAUSE  &kp ENTER  &trans  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET  &kp RIGHT_BRACE       &kp GREATER_THAN       &trans     &trans
+                                        &trans          &trans            &kp ESCAPE            &kp TAB  &trans            &trans     &trans  &trans                 &trans             &trans
             >;
 
             sensor-bindings =
