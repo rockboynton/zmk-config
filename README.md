@@ -12,4 +12,4 @@ in Rust.
 
 ## Keymap
 
-![keymap](keymap-drawer/kyria.svg)
+![keymap](keymap-drawer/kyria_rev3.svg)

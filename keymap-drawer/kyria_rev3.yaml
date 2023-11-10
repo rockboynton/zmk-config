@@ -1,0 +1,157 @@
+layout: {qmk_keyboard: splitkb/kyria/rev1}
+layers:
+  base: [TAB, Q, W, E, R, T, Y, U, I, O, P, BACKSPACE, '`', A, S, D, F, G, H, J, K, L, ;, '''', LSHFT, Z, X, C, V, B, '-', LS(LG(4)), LG(W), _, N, M, ',', ., /, RIGHT
+      SHIFT, LCTRL, LALT, LGUI, BACKSPACE, num, sym, SPACE, LCTRL, LALT, LGUI]
+  num:
+  - {t: ▽, type: trans}
+  - F9
+  - F10
+  - F11
+  - F12
+  - (
+  - )
+  - '7'
+  - '8'
+  - '9'
+  - '*'
+  - /
+  - {t: ▽, type: trans}
+  - F5
+  - F6
+  - F7
+  - F8
+  - '['
+  - ']'
+  - '4'
+  - '5'
+  - '6'
+  - '='
+  - ^
+  - {t: ▽, type: trans}
+  - F1
+  - F2
+  - F3
+  - F4
+  - CALCULATOR
+  - {t: ▽, type: trans}
+  - LC(UP ARROW)
+  - {t: ▽, type: trans}
+  - '&caps_word'
+  - '0'
+  - '1'
+  - '2'
+  - '3'
+  - +
+  - '-'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {type: held}
+  - {t: ▽, type: trans}
+  - ENTER
+  - TAB
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  sym:
+  - '~'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '|'
+  - '`'
+  - '!'
+  - '@'
+  - '#'
+  - $
+  - '%'
+  - ^
+  - '&'
+  - '*'
+  - +
+  - '='
+  - \
+  - {t: ▽, type: trans}
+  - <
+  - '{'
+  - '['
+  - (
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - PLAY PAUSE
+  - MUTE
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - )
+  - ']'
+  - '}'
+  - '>'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - DELETE
+  - ESCAPE
+  - {t: ▽, type: trans}
+  - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  nav:
+  - BT CLR
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - HOME
+  - PAGE DOWN
+  - PAGE UP
+  - END
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: BT, h: '0'}
+  - {t: BT, h: '1'}
+  - {t: BT, h: '2'}
+  - BT PRV
+  - BT NXT
+  - {t: ▽, type: trans}
+  - LEFT
+  - DOWN
+  - UP
+  - RIGHT
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - LA(LEFT)
+  - LA(DOWN)
+  - LA(UP)
+  - LA(RIGHT)
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {type: held}
+  - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
