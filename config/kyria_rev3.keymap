@@ -3,7 +3,7 @@
 #include <dt-bindings/zmk/keys.h>
 
 &sensors {
-    triggers-per-rotation = <18>;
+    triggers-per-rotation = <36>;
 };
 
 / {
@@ -33,8 +33,8 @@
             >;
 
             sensor-bindings =
-                <&inc_dec_kp LS(LG(Z)) LG(Z)>,
-                <&inc_dec_kp LS(LC(MINUS)) LC(MINUS)>;
+                <&inc_dec_kp LS(LC(MINUS)) LC(MINUS)>,
+                <&inc_dec_kp LS(LG(Z)) LG(Z)>;
         };
 
         sym {
