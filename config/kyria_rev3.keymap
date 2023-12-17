@@ -12,18 +12,6 @@ MAKE_HRM(hmr, KEYS_L KEYS_T)  // right-hand HRMs
 };
 
 / {
-    behaviors {
-        pht: positional_hold_tap {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "hold-preferred";
-            tapping-term-ms = <400>;
-            quick-tap-ms = <200>;
-            bindings = <&kp>, <&kp>;
-            hold-trigger-key-positions = <1>;    // <---[[the W key]]
-        };
-    };
-
     macros {
         two_key: two_key {
             // ...
@@ -56,9 +44,9 @@ MAKE_HRM(hmr, KEYS_L KEYS_T)  // right-hand HRMs
 
         num {
             bindings = <
-&trans  &kp F9  &kp F10  &kp F11  &kp F12  &kp LG(N4)                                                      &kp LS(LG(N4))  &kp N7  &kp N8  &kp N9  &kp ASTERISK  &kp FSLH
+&trans  &kp F9  &kp F10  &kp F11  &kp F12  &kp LG(V)                                                      &kp LS(LG(V))  &kp N7  &kp N8  &kp N9  &kp ASTERISK  &kp FSLH
 &trans  &kp F5  &kp F6   &kp F7   &kp F8   &kp LG(C)                                                       &kp LG(X)       &kp N4  &kp N5  &kp N6  &kp EQUAL     &kp CARET
-&trans  &kp F1  &kp F2   &kp F3   &kp F4   &kp LG(C)  &kp LS(LG(P))  &kp LC(UP_ARROW)  &trans  &caps_word  &kp N0          &kp N1  &kp N2  &kp N3  &kp PLUS      &kp MINUS
+&trans  &kp F1  &kp F2   &kp F3   &kp F4   &kp LG(F)  &kp LS(LG(P))  &kp LC(UP_ARROW)  &trans  &caps_word  &kp N0          &kp N1  &kp N2  &kp N3  &kp PLUS      &kp MINUS
                          &trans   &trans   &trans     &trans         &trans            &trans  &kp ENTER   &kp TAB         &trans  &trans
             >;
 

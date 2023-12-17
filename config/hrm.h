@@ -14,7 +14,7 @@
             name: name {                                                                   \
                 ZMK_BEHAVIOR_CORE_hold_tap;                                            \
                 flavor = "balanced";                                                   \
-                tapping-term-ms = <280>; \
+                tapping-term-ms = <250>; \
                 quick-tap-ms = <175>; \
                 require-prior-idle-ms = <150>; \
                 bindings = <&kp>, <&kp>; \
