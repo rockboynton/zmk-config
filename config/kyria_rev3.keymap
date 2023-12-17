@@ -3,20 +3,35 @@
 #include <dt-bindings/zmk/keys.h>
 
 &sensors {
-    triggers-per-rotation = <36>;
+    triggers-per-rotation = <30>;
 };
 
 / {
+    macros {
+        two_key: two_key {
+            // ...
+            compatible = "zmk,behavior-macro-two-param";
+            #binding-cells = <2>;
+            wait-ms = <40>;
+            tap-ms = <40>;
+            bindings
+              = <&macro_param_1to1>
+              , <&kp MACRO_PLACEHOLDER>
+              , <&macro_param_2to1>
+              , <&kp MACRO_PLACEHOLDER>
+              ;
+        };
+    };
 
     keymap {
         compatible = "zmk,keymap";
 
         base {
             bindings = <
-&kp TAB    &kp Q  &kp W  &kp E      &kp R     &kp T                                                               &kp Y      &kp U     &kp I      &kp O    &kp P     &kp BACKSPACE
-&kp GRAVE  &kp A  &kp S  &kp D      &kp F     &kp G                                                               &kp H      &kp J     &kp K      &kp L    &kp SEMI  &kp SINGLE_QUOTE
-&kp LSHFT  &kp Z  &kp X  &kp C      &kp V     &kp B     &kp MINUS      &kp LS(LG(N4))  &kp LG(W)  &kp UNDERSCORE  &kp N      &kp M     &kp COMMA  &kp DOT  &kp FSLH  &kp RIGHT_SHIFT
-                         &kp LCTRL  &kp LALT  &kp LGUI  &kp BACKSPACE  &mo 1           &mo 2      &kp SPACE       &kp LCTRL  &kp LALT  &kp LGUI
+&kp GRAVE   &kp Q  &kp W  &kp E  &kp R  &kp T                                                              &kp Y    &kp U  &kp I      &kp O    &kp P     &kp PIPE
+&kp ESCAPE  &kp A  &kp S  &kp D  &kp F  &kp G                                                              &kp H    &kp J  &kp K      &kp L    &kp SEMI  &kp SINGLE_QUOTE
+&caps_word  &kp Z  &kp X  &kp C  &kp V  &kp B    &kp MINUS      &kp LS(LG(N4))  &kp LG(W)  &kp UNDERSCORE  &kp N    &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp RIGHT_SHIFT
+                          &kp A  &kp A  &kp DEL  &kp BACKSPACE  &mo 1           &mo 2      &kp SPACE       &kp TAB  &kp A  &kp A
             >;
 
             sensor-bindings =
@@ -26,10 +41,10 @@
 
         num {
             bindings = <
-&trans  &kp F9  &kp F10  &kp F11  &kp F12  &kp LEFT_PARENTHESIS                                                &kp RIGHT_PARENTHESIS  &kp N7  &kp N8  &kp N9  &kp ASTERISK  &kp FSLH
-&trans  &kp F5  &kp F6   &kp F7   &kp F8   &kp LBKT                                                            &kp RBKT               &kp N4  &kp N5  &kp N6  &kp EQUAL     &kp CARET
-&trans  &kp F1  &kp F2   &kp F3   &kp F4   &kp K_CALCULATOR      &trans  &kp LC(UP_ARROW)  &trans  &caps_word  &kp N0                 &kp N1  &kp N2  &kp N3  &kp PLUS      &kp MINUS
-                         &trans   &trans   &trans                &trans  &trans            &trans  &kp ENTER   &kp TAB                &trans  &trans
+&trans  &kp F9  &kp F10  &kp F11  &kp F12  &kp LG(N4)                                                      &kp LS(LG(N4))  &kp N7  &kp N8  &kp N9  &kp ASTERISK  &kp FSLH
+&trans  &kp F5  &kp F6   &kp F7   &kp F8   &kp LG(C)                                                       &kp LG(X)       &kp N4  &kp N5  &kp N6  &kp EQUAL     &kp CARET
+&trans  &kp F1  &kp F2   &kp F3   &kp F4   &kp LG(C)  &kp LS(LG(P))  &kp LC(UP_ARROW)  &trans  &caps_word  &kp N0          &kp N1  &kp N2  &kp N3  &kp PLUS      &kp MINUS
+                         &trans   &trans   &trans     &trans         &trans            &trans  &kp ENTER   &kp TAB         &trans  &trans
             >;
 
             sensor-bindings =
@@ -39,10 +54,10 @@
 
         sym {
             bindings = <
-&kp TILDE  &trans           &trans          &trans            &trans                &trans                                                         &trans     &trans                 &trans             &trans           &trans            &kp PIPE
-&kp GRAVE  &kp EXCLAMATION  &kp AT_SIGN     &kp HASH          &kp DOLLAR            &kp PERCENT                                                    &kp CARET  &kp AMPERSAND          &kp ASTERISK       &kp PLUS         &kp EQUAL         &kp BACKSLASH
-&trans     &kp LESS_THAN    &kp LEFT_BRACE  &kp LEFT_BRACKET  &kp LEFT_PARENTHESIS  &trans       &trans      &kp C_PLAY_PAUSE  &kp K_MUTE  &trans  &trans     &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET  &kp RIGHT_BRACE  &kp GREATER_THAN  &trans
-                                            &trans            &trans                &kp DELETE   &kp ESCAPE  &trans            &trans      &trans  &trans     &trans                 &trans
+&kp TILDE  &trans    &kp UNDERSCORE  &kp MINUS         &two_key LT MINUS     &two_key AMPERSAND AMPERSAND                                            &two_key PIPE PIPE  &two_key MINUS GT      &two_key EQUAL GT  &two_key COLON COLON  &two_key EQUAL EQUAL  &two_key EXCLAMATION EQUAL
+&trans     &kp EXCL  &kp AT_SIGN     &kp HASH          &kp DOLLAR            &kp PERCENT                                                             &kp CARET           &kp AMPERSAND          &kp ASTERISK       &kp PLUS              &kp EQUAL             &kp BACKSLASH
+&trans     &kp LT    &kp LEFT_BRACE  &kp LEFT_BRACKET  &kp LEFT_PARENTHESIS  &trans                        &trans      &kp C_PLAY_PAUSE  &kp K_MUTE  &kp LS(LG(T))       &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET  &kp RIGHT_BRACE       &kp GREATER_THAN      &trans
+                                     &trans            &trans                &kp DELETE                    &kp ESCAPE  &trans            &trans      &trans              &trans                 &trans             &trans
             >;
 
             sensor-bindings =
@@ -52,10 +67,10 @@
 
         nav {
             bindings = <
-&bt BT_CLR  &trans        &trans        &trans        &trans      &trans                                      &trans  &kp HOME      &kp PAGE_DOWN  &kp PAGE_UP  &kp END        &trans
-&trans      &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_PRV  &bt BT_NXT                                  &trans  &kp LEFT      &kp DOWN       &kp UP       &kp RIGHT      &trans
-&trans      &trans        &trans        &trans        &trans      &trans      &trans  &trans  &trans  &trans  &trans  &kp LA(LEFT)  &kp LA(DOWN)   &kp LA(UP)   &kp LA(RIGHT)  &trans
-                                        &trans        &trans      &trans      &trans  &trans  &trans  &trans  &trans  &trans        &trans
+&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_PRV  &bt BT_NXT                                      &trans  &kp HOME      &kp PAGE_DOWN  &kp PAGE_UP  &kp END        &trans
+&trans      &trans        &trans        &trans        &trans      &trans                                          &trans  &kp LEFT      &kp DOWN       &kp UP       &kp RIGHT      &trans
+&trans      &trans        &trans        &trans        &trans      &trans      &trans  &trans  &trans  &trans      &trans  &kp LA(LEFT)  &kp LA(DOWN)   &kp LA(UP)   &kp LA(RIGHT)  &trans
+                                        &trans        &trans      &trans      &trans  &trans  &trans  &trans      &trans  &trans        &trans
             >;
         };
     };
