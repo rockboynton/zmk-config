@@ -1,15 +1,15 @@
 layout: {qmk_keyboard: splitkb/kyria/rev1}
 layers:
-  base: [TAB, Q, W, E, R, T, Y, U, I, O, P, BACKSPACE, '`', A, S, D, F, G, H, J, K, L, ;, '''', LSHFT, Z, X, C, V, B, '-', LS(LG(4)), LG(W), _, N, M, ',', ., /, RIGHT
-      SHIFT, LCTRL, LALT, LGUI, BACKSPACE, num, sym, SPACE, LCTRL, LALT, LGUI]
+  base: ['`', Q, W, E, R, T, Y, U, I, O, P, '|', ESCAPE, A, S, D, F, G, H, J, K, L, ;, '''', '&caps_word', Z, X, C, V, B, '-', LS(LG(4)), LG(W), _, N, M, ',', .,
+    /, RIGHT SHIFT, A, A, DEL, BACKSPACE, num, sym, SPACE, TAB, A, A]
   num:
   - {t: ▽, type: trans}
   - F9
   - F10
   - F11
   - F12
-  - (
-  - )
+  - LG(4)
+  - LS(LG(4))
   - '7'
   - '8'
   - '9'
@@ -20,8 +20,8 @@ layers:
   - F6
   - F7
   - F8
-  - '['
-  - ']'
+  - LG(C)
+  - LG(X)
   - '4'
   - '5'
   - '6'
@@ -32,8 +32,8 @@ layers:
   - F2
   - F3
   - F4
-  - CALCULATOR
-  - {t: ▽, type: trans}
+  - LG(C)
+  - LS(LG(P))
   - LC(UP ARROW)
   - {t: ▽, type: trans}
   - '&caps_word'
@@ -56,17 +56,17 @@ layers:
   sym:
   - '~'
   - {t: ▽, type: trans}
+  - _
+  - '-'
+  - '&two_key LT MINUS'
+  - '&two_key AMPERSAND AMPERSAND'
+  - '&two_key PIPE PIPE'
+  - '&two_key MINUS GT'
+  - '&two_key EQUAL GT'
+  - '&two_key COLON COLON'
+  - '&two_key EQUAL EQUAL'
+  - '&two_key EXCLAMATION EQUAL'
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - '|'
-  - '`'
   - '!'
   - '@'
   - '#'
@@ -87,8 +87,7 @@ layers:
   - {t: ▽, type: trans}
   - PLAY PAUSE
   - MUTE
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - LS(LG(T))
   - )
   - ']'
   - '}'
@@ -99,18 +98,18 @@ layers:
   - DELETE
   - ESCAPE
   - {t: ▽, type: trans}
-  - {type: held}
   - {t: ▽, type: trans}
+  - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   nav:
   - BT CLR
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - {t: BT, h: '0'}
+  - {t: BT, h: '1'}
+  - {t: BT, h: '2'}
+  - BT PRV
+  - BT NXT
   - {t: ▽, type: trans}
   - HOME
   - PAGE DOWN
@@ -118,11 +117,11 @@ layers:
   - END
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: BT, h: '0'}
-  - {t: BT, h: '1'}
-  - {t: BT, h: '2'}
-  - BT PRV
-  - BT NXT
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - LEFT
   - DOWN
