@@ -23,7 +23,7 @@ layers:
   - {t: J, h: RSHFT}
   - {t: K, h: LGUI}
   - {t: L, h: LALT}
-  - {t: ;, h: LGUI}
+  - {t: ;, h: LCTL}
   - ''''
   - '&caps_word'
   - Z
