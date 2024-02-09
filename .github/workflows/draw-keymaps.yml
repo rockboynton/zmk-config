@@ -14,3 +14,4 @@ jobs:
     with:
       keymap_patterns: "config/*.keymap"        # path to the keymaps to parse
       output_folder: "keymap-drawer"            # path to save produced SVG and keymap YAML files
+      # config_path: "keymap_drawer.config.yaml"
